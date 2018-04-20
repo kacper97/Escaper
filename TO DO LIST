@@ -1,6 +1,7 @@
-- Merge requirements in Magic Draw - Denis Drobny ✓
-- Generate Report for requirements - Denis Drobny ✓
-- Upload report on GitHub repo - Denis Drobny ✓
+- Merge requirements in Magic Draw - Denis ✓
+- Generate Report for requirements - Denis ✓
+- Upload report on GitHub repo - Denis ✓
+- Improve structure of the repo and add log files for having clear view of who changed what and how - Denis ✓
 - Consult new use case model and project proposal on whatsUp -
 - Fix use cases according to the teachers' remarks -
 - Connect use cases with FR - 
