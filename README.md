@@ -1,4 +1,4 @@
 # Escaper Project 
-Group Participants : Kacper Woloszyn, Pablo Valderrama Santiago, Kirill Shpak, Maciek Pikulski, Alberto Perez, Denis Drobny, Charlotte Cutler, Thomas Cauneau.
+Group Participants : Kacper Woloszyn, Pablo Valderrama Santiago, Kirill Shpak, Maciej Pikulicki, Alberto Perez, Denis Drobny, Charlotte Cutler, Thomas Cauneau.
 ## Overview.
-This application, when location is turned on, will show the nearest emergency exits to a person. More information can be seen in the project proposal.
+This application, will show the nearest emergency exits to a person. More information can be seen in the project proposal.
