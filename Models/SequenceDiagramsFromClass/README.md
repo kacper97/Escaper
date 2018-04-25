@@ -9,6 +9,9 @@ Kacper :
 + Select desirable statistic
          
 Denis  :
++ See Current Position on Map
++ Manage Profile
++ Password Change
 
 Thomas :
 + Manage User
