@@ -1,10 +1,12 @@
 Here we will upload the Sequence Diagrams for every use case in our model
 
-
-Kacper : 1. + View statistics panel
-         2. + Statistic by printer
-         3. + Statistic on screen
-         4. + Select desirable statistic
+. . . . . List of who did what  . . . . .
+ 
+Kacper : 
++ View statistics panel
++ Statistic by printer
++ Statistic on screen
++ Select desirable statistic
          
 Denis  :
 
