@@ -1,6 +1,6 @@
 Here we will upload the Sequence Diagrams for every use case in our model
 
-#List of who did what  
+# List of who did what  
  
 ### Kacper : 
 + View statistics panel
