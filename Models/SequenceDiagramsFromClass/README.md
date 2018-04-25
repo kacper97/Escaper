@@ -2,32 +2,32 @@ Here we will upload the Sequence Diagrams for every use case in our model
 
 ## List of who did what  
  
-Kacper : 
+# Kacper : 
 + View statistics panel
 + Statistic by printer
 + Statistic on screen
 + Select desirable statistic
          
-Denis  :
+# Denis  :
 + See Current Position on Map
 + Manage Profile
 + Password Change
 
-Thomas :
+# Thomas :
 + Manage User
 + Add User
 + Delete User
 + Change User Data
 
-Charlotte :
+# Charlotte :
 
-Maciek :
+# Maciek :
 + Manage building plans
 + Upload building plans
 + Delete building plans
 
-Alberto :
+# Alberto :
 
-Kirill : 
+# Kirill : 
 
-Pablo :
+# Pablo :
