@@ -15,6 +15,9 @@ Thomas :
 Charlotte :
 
 Maciek :
++ Manage building plans
++ Upload building plans
++ Delete building plans
 
 Alberto :
 
