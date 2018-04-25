@@ -11,6 +11,10 @@ Kacper :
 Denis  :
 
 Thomas :
++ Manage User
++ Add User
++ Delete User
++ Change User Data
 
 Charlotte :
 
