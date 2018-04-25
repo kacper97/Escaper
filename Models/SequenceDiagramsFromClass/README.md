@@ -20,7 +20,9 @@ Here we will upload the Sequence Diagrams for every use case in our model
 + Change User Data
 
 ### Charlotte :
-
++ Application Visitor register
++ Application visitor set personal information
++ Application Visitor register as building owner
 ### Maciek :
 + Manage building plans
 + Upload building plans
