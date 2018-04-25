@@ -29,6 +29,10 @@ Here we will upload the Sequence Diagrams for every use case in our model
 + Delete building plans
 
 ### Alberto :
++ Get Route To Escape
++ Get Alternative Route
++ Reference to Login
++ Reference to Logout
 
 ### Kirill : 
 + Log in
