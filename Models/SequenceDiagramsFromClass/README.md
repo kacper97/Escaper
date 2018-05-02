@@ -39,3 +39,6 @@ Here we will upload the Sequence Diagrams for every use case in our model
 + Log out
 
 ### Pablo :
++Register
++Register User
++Register Building Owner
