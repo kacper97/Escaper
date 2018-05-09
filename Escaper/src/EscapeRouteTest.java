@@ -63,5 +63,25 @@ class EscapeRouteTest {
 	void testFinalize() {
 		fail("Not yet implemented");
 	}
+	
+	
+	@Before
+	
+	
+	
+	@Test
+	void whenUpdatingRouteWithDifferentLocationRouteChanges() {
+		Location l = new Location();
+		Building b = new Building();
+		Route r = new Route();
+		
+		EscapeRoute escapeRoute = new EscapeRoute(l,b);
+		
+		r = escapeRoute.getRoute();
+		escapeRoute.updateRoute(l);
+		
+		
+	}
+	
 
 }
