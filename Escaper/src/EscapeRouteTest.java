@@ -72,6 +72,15 @@ class EscapeRouteTest {
 	
 	
 	/////// END OF CREATE ROUTE TESTS ////////
+	
+	////////// GET ROUTE TESTS ///////////
+	@Test
+	void getRouteReturnsCurrentRoute() {
+		escapeRoute = new EscapeRoute(l,b);
+		escapeRoute.currentRoute = route;
+		assertEquals(escapeRoute.getRoute(), route);
+	}
+	/////// END OF GET ROUTE TESTS ///////
 
 	@Test
 	void testObject() {
