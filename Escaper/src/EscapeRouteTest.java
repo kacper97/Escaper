@@ -77,10 +77,10 @@ class EscapeRouteTest {
 
 	@Test(expected = IOException.class)
 	void createMapTest() throws IOException {
-		// check if we can create a new map
-		Space space = new Space();
+		// check if we can create a new map object
+		EscapeRoute escape = new EscapeRoute(location, building);
 		Map map = new Map();
-		space.getMap();
+		escape.getMap();
 	}
 
 	@Test
@@ -96,9 +96,9 @@ class EscapeRouteTest {
 	@Test
 	void checkMapTypeTest() {
 		// check if the map returned is of type Map
-		Space space = new Space();
+		EscapeRoute escape = new EscapeRoute(location, building);
 		Map map = new Map();
-		assertThat(space.getMap(), instanceOf(Map.class));
+		assertThat(escape.getMap(), instanceOf(Map.class));
 	}
 
 	@Test
