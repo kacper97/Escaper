@@ -75,31 +75,42 @@ class EscapeRouteTest {
 
 	////////// GET MAP TESTS ///////////
 
-	@Test
-	void createMapTest() {
+	@Test(expected = IOException.class)
+	void createMapTest() throws IOException {
 		// check if we can create a new map
+		Space space = new Space();
+		Map map = new Map();
+		space.getMap();
 	}
-	
+
 	@Test
-	void checkMapExistsTest(){
-		// will go around all maps and check if the one we are looking for exists
+	void checkMapExistsTest() {
+		// will check if the Map class exists
+		try {
+			Class.forName("org.package.Map");
+		} catch (ClassNotFoundException e) {
+			Assert.fail("should have a class called Map");
+		}
 	}
-	
+
 	@Test
-	void checkMapTypeTest(){
+	void checkMapTypeTest() {
 		// check if the map returned is of type Map
+		Space space = new Space();
+		Map map = new Map();
+		assertThat(space.getMap(), instanceOf(Map.class));
 	}
-	
+
 	@Test
-	void checkEscapeMapTest(){
+	void checkEscapeMapTest() {
 		// check if escape map contain route to escape
 	}
 
 	@Test
-	void checkMapEmptyTest(){
+	void checkMapEmptyTest() {
 		// check if the getMap is empty or not
 	}
-	
+
 	/////// END OF GET MAP TESTS ///////
 
 	@Test
