@@ -101,14 +101,13 @@ class EscapeRouteTest {
 		assertThat(escape.getMap(), instanceOf(Map.class));
 	}
 
-	@Test
-	void checkEscapeMapTest() {
-		// check if escape map contain route to escape
-	}
 
 	@Test
-	void checkMapEmptyTest() {
+	void checkMapEmptyTest() throws NullPointerException{
 		// check if the getMap is empty or not
+		Map emptyMap = new Map();
+		assertFalse(emptyMap.isEmpty());
+		
 	}
 
 	/////// END OF GET MAP TESTS ///////
