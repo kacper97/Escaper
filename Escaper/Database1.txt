@@ -1,1 +1,3 @@
-This would contain information about the buildings.
+Corridor, capacity, id
+Room, capacity, id[id corridors]
+Exit, id [capacity, id, room.id]
