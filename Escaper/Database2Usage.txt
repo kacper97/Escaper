@@ -1,0 +1,2 @@
+room.id int
+corridor.id int
