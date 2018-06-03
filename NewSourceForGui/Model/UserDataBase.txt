@@ -1,0 +1,7 @@
+student;password;Robert;Lewandowski;U
+test;test;Gareth;Bale;U
+admin;admin;Mister;Admin;A
+set username here;set password here;input name here;input surname here;U
+b;b;Building;Owner;B
+jose;cj;Michaela;Hroncova;U
+building;owner;Big;Smoke;B
