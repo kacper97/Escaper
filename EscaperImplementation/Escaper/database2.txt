@@ -1,0 +1,11 @@
+undirected
+5	
+Room1
+Room2
+Room3
+Corridor1
+Corridor2
+Room1 Corridor2
+Corridor2 Room3
+Room3 Corridor1
+Corridor1 Room2
