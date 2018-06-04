@@ -1,10 +1,10 @@
 undirected
 5	
-Room1
-Room2
-Room3
-Corridor1
-Corridor2
+Room1 100,100
+Room2 200,300
+Room3 300,400
+Corridor1 100,200
+Corridor2 132,304
 Room1 Corridor2
 Corridor2 Room3
 Room3 Corridor1

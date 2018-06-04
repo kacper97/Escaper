@@ -1,31 +1,32 @@
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.util.Scanner;
- 
+import java.io.IOException;
 
-//constructor for Neighbour
-class Neighbour {
+//constructor for ConnectedBy_
+class ConnectedBy_ {
     public int vertexNum;
-    public Neighbour next;
-    public Neighbour(int vnum, Neighbour nbr) {
+    public ConnectedBy_ next;
+    public ConnectedBy_(int vnum, ConnectedBy_ nbr) {
             this.vertexNum = vnum; //quadratic derivative of completing squares
-            next = nbr; //neighbours
+            next = nbr; //ConnectedBy_s
     }
 }
 
 //constructor for Vertex 
 class Vertex {
     String room;
-    Neighbour adjacentList;
-    Vertex(String room, Neighbour Neighbours) {
+    Double coordinates;
+    ConnectedBy_ adjacentList;
+    Vertex(String room, ConnectedBy_ ConnectedBy_s, Double coordinates) {
             this.room = room;
-            this.adjacentList = Neighbours;
+            this.adjacentList = ConnectedBy_s;
+            this.coordinates = coordinates;
     }
 }
- 
+
 public class Parser {
- 
+	 
     Vertex[] adjacentLists;  //array of adjacent lists
      
     public Parser(String file) throws FileNotFoundException {
@@ -48,7 +49,7 @@ public class Parser {
  
         // read vertices
         for (int v=0; v < adjacentLists.length; v++) {
-            adjacentLists[v] = new Vertex(sc.next(), null);
+            adjacentLists[v] = new Vertex(sc.next(), null, sc.nextDouble());
         }
  
         // read edges
@@ -60,9 +61,9 @@ public class Parser {
              
             // add v2 to front of v1's adjacency list and
             // add v1 to front of v2's adjacency list
-            adjacentLists[v1].adjacentList = new Neighbour(v2, adjacentLists[v1].adjacentList);
+            adjacentLists[v1].adjacentList = new ConnectedBy_(v2, adjacentLists[v1].adjacentList);
             if (undirected) {
-                adjacentLists[v2].adjacentList = new Neighbour(v1, adjacentLists[v2].adjacentList);
+                adjacentLists[v2].adjacentList = new ConnectedBy_(v1, adjacentLists[v2].adjacentList);
             }
         }
     }
@@ -70,7 +71,7 @@ public class Parser {
     /* Compares the room field against the target and if match 
      * returns current index of array
      */
-     
+	
     int indexForroom(String room) {
         for (int v=0; v < adjacentLists.length; v++) {
             if (adjacentLists[v].room.equals(room)) {
@@ -82,31 +83,25 @@ public class Parser {
     
     /*prints the graph data in the console command line */
     
-     
-    public void print() {
+    
+    public void updateFullnesses(Map map) {
         System.out.println();
         for (int v=0; v < adjacentLists.length; v++) {
             System.out.print(adjacentLists[v].room);
-            for (Neighbour nbr=adjacentLists[v].adjacentList; nbr != null;nbr=nbr.next) {
+            for (ConnectedBy_ nbr=adjacentLists[v].adjacentList; nbr != null;nbr=nbr.next) {
                 System.out.print(" --> " + adjacentLists[nbr.vertexNum].room);
             }
             System.out.println("\n");
         }
     }
-     
+    
 
-    // Main reads the files and parses it.
-    public static void main(String[] args) 
-    throws IOException {
-        Scanner sc = new Scanner(System.in);
+    public static void main(String[] args)  throws IOException{
+		Scanner sc = new Scanner(System.in);
         System.out.print("Enter Parser input file room: "); //allows for different files to be read in
-        
         String file = sc.nextLine();
         Parser Parser = new Parser(file);
-        Parser.print();
-    }
- 
+        Map Map = new Map(file);
+		Parser.updateFullnesses(Map);
+	}
 }
-
-
-
