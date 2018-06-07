@@ -1,178 +1,87 @@
 import static org.mockito.Mockito.*;
 
-class EscapeRouteTestMock {
+class RouteComputerTestMock {
 
 	
-	Location currentLocation;
-	Route currentRoute;
-	Building building;
-	EscapeRoute newRoute = new EscapeRoute(location, building);
-	newRoute.currentRoute = null;
+	RouteComputer route = new RouteComputer(location, building);
 	
-	
-	
-	////////// CREATE ROUTE TESTS ///////////
-	
+        
 	@Test 
-	void createRouteWhenNoRouteAssignedTest() {
+	public void createRouteWhenNoRouteAssignedTest() {
 		// The route property is empty
 		// Call createRoute
 		// Route property is not empty
-		EscapeRoute newRoute = mock(EscapeRoute.class);
-		when(newRoute.getRoute()).thenReturn(true);
-		newRoute.createRoute();
-		verify(newRoute.getRoute() != null);
-		
+		RouteComputer route = mock(RouteComputer.class);
+		when(route.getRoute()).thenReturn(true);
+		route.createRoute();
+		verify(route.getRoute() != null);
+	
 	}
 	
 	@Test
-	void checkRouteCreatedProperlyTest() {
-		// Check if the entries of the route property are really included in building map, compare with the map property
-		EscapeRoute newRoute = mock(EscapeRoute.class);
-		when(newRoute.currentLocation != null).thenReturn(true);
-		when(newRoute.building != null).thenReturn(true);
-		newRoute.createRoute();
-		verify(building.getMap() == newRoute.getMap());
-	}
-	
-	
-	@Test
-	void checkRouteIsEmptyIfMapIsEmptyTest() {
+	public void checkRouteIsEmptyIfMapIsEmptyTest() {
 		// Introduce an empty map to the map property
 		// Compute the route and check if it's empty
-		EscapeRoute newRoute = mock(EscapeRoute.class);
-		building.uploadMapFromTextFile(null);
-		newRoute.createRoute();
-		verify(newRoute.currentRoute == null);
+		RouteComputer route = mock(RouteComputer.class);
+		when(route.getMap()).thenReturn(false);
+		route.getBuilding().setMap() = new Map();
+		route.updateRoute();
+		verify(route.getMap() == null);
 		
 	}
 	
 	@Test
-	void checkRouteIsEmptyIfMapIsNotAssignedTest() {
+	public void checkRouteIsEmptyIfMapIsNotAssignedTest() {
 		// Set the map property to null
 		// Compute the route and check if it's empty
-		EscapeRoute newRoute = mock(EscapeRoute.class);
-		building.getMap();
-		building.buildingMap == null;
-		verify(newRoute.currentRoute == null);
+		RouteComputer route = mock(RouteComputer.class);
+		when(route.getRoute()).thenReturn(false);
+		route.getBuilding().setMap() = null;
+		route.updateRoute();
+		verify(route.getRoute() == null);
 	}
 	
 	
 	@Test
-	void checkRouteIsEmptyIfBuildingHasNoMapTest() {
+	public void checkRouteIsEmptyIfBuildingHasNoMapTest() {
 		// Set the building's map property to null
 		// Compute the route and check if it's empty
+		RouteComputer route = mock(RouteComputer.class);
+		when(route.getRoute()).thenReturn(false);
+		route.setBuilding() = null;
+		route.updateRoute();
+		verify(route.getRoute() == null);
 	}
 	
 	@Test
-	void checkIfTheStartingPositionOnRouteIsCorrectTest() {
+	public void checkIfTheStartingPositionOnRouteIsCorrectTest() {
 		// Get route
 		// Compare with user's position
+		RouteComputer route = mock(RouteComputer.class);
+		when(route.getstartingPoint() == user.getPosition()).thenReturn(true);
+		auto user;
+		Facade facade = new Facade(user);
+		auto route = facade.getRoute();
+		verify(route.getstartingPoint() == user.getPosition());
 	}
 	
 	@Test
-	void checkIfTheFinalPositionOnRouteIsExitTest() {
+	public void checkIfTheFinalPositionOnRouteIsExitTest() {
 		// Get route
 		// Check if the last entry on the route is really an exit
+		RouteComputer route = mock(RouteComputer.class);
+		when(route.getEndPoint() == Exit).thenReturn(true);
+		verify(route.getEndPoint() == Exit);
 	}
 	
 	@Test
-	void whatHappensIfAllCapacitiesOnTheMapAreFullTest() {
-		// Set the map's capacities to full
-		// Try to create path
+        public void getRouteReturnsCurrentRoute() {
+	RouteComputer route = mock(RouteComputer.class);
+	when(escapeRoute.getRoute() == route).thenReturn(true);
+	escapeRoute = new EscapeRoute(l, b);
+	escapeRoute.currentRoute = route;
+	verify(escapeRoute.getRoute() == route);
 	}
-	
-	@Test
-	void capacityIncreasesIfSomeoneAsksForRouteTest() {
-		// Observe map capacities
-		// Ask for map
-		// Check if the capacities have increased
-	}
-	
-	
-	
-	
-	
-	/////// END OF CREATE ROUTE TESTS ////////
-
-	@Test
-	void testObject() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testGetClass() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testHashCode() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testEquals() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testClone() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testToString() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testNotify() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testNotifyAll() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testWaitLong() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testWaitLongInt() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testWait() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testFinalize() {
-		fail("Not yet implemented");
-	}
-	
-	
-	@Before
-	
-	
-	
-	@Test
-	void whenUpdatingRouteWithDifferentLocationRouteChanges() {
-		Location l = new Location();
-		Building b = new Building();
-		Route r = new Route();
 		
-		EscapeRoute escapeRoute = new EscapeRoute(l,b);
-		
-		r = escapeRoute.getRoute();
-		escapeRoute.updateRoute(l);
-		
-		
-	}
 	
-
 }
