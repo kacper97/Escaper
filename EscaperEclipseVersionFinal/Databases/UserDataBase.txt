@@ -1,0 +1,3 @@
+student;password;Robert;Lewandowski;U
+admin;admin;Thiago;Motta;A
+building;owner;Cristiano;Messi;B
